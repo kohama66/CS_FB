@@ -1,8 +1,12 @@
 import { initializeApp } from "firebase/app";
 
 export default defineNuxtPlugin(async () => {
+  const {
+    public: { FIREBASE_API_KEY },
+  } = useRuntimeConfig();
+
   const firebaseConfig = {
-    apiKey: "AIzaSyDyoaOOefwmhBNseEe2GejBfQVX54YKgLs",
+    apiKey: FIREBASE_API_KEY,
     authDomain: "storage-example-d144f.firebaseapp.com",
     projectId: "storage-example-d144f",
     storageBucket: "storage-example-d144f.appspot.com",
